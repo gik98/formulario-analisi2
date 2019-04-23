@@ -1,0 +1,120 @@
+\documentclass[a4paper,portrait,columns=3,5pt]{cheatsheet}
+\title{Formulario Analisi 2}
+\author{Giacomo Fabris}
+\date{\today}
+
+\usepackage{commath}
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+\begin{document}
+\maketitle
+
+\section{Formule trigonometriche}
+\subsection{Addizione e sottrazione}
+$$\sin (\alpha + \beta) = \sin(\alpha) \cos(\beta) + \cos(\alpha)\sin(\beta)$$
+$$\sin(\alpha - \beta) = \sin(\alpha) \cos(\beta) - \cos(\alpha)\sin(\beta)$$
+$$\cos(\alpha + \beta) = \cos(\alpha) \cos(\beta) - \sin(\alpha) \sin(\beta)$$
+$$\cos(\alpha - \beta) = \cos(\alpha) \cos(\beta) + \sin(\alpha) \sin(\beta)$$
+$$\tan(\alpha + \beta) = \frac{\tan(\alpha) + \tan(\beta)}{1 - \tan(\alpha)\tan(\beta)}$$
+$$\tan(\alpha - \beta) = \frac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha)\tan(\beta)}$$
+\subsection{Duplicazione}
+$$\sin(2\alpha) = 2\sin(\alpha)\cos(\alpha)$$
+$$\cos(2\alpha) = \cos^2 (\alpha) - \sin^2 (\alpha)$$
+$$\tan(2\alpha) = \frac{\tan(\alpha)}{1 - \tan^2(\alpha)}$$
+$$\cot(2\alpha) = \frac{\cot^2(\alpha) - 1}{2\cot(\alpha)}$$
+\subsection{Bisezione}
+$$\sin\left(\frac{\alpha}{2}\right) = \pm \sqrt{\frac{1 - \cos(\alpha)}{2}}$$
+$$\cos\left(\frac{\alpha}{2}\right) = \pm \sqrt{\frac{1 + \cos(\alpha)}{2}}$$
+$$\tan\left(\frac{\alpha}{2}\right) = {\frac{1 - \cos(\alpha)}{\sin(\alpha)}}$$
+$$\cot\left(\frac{\alpha}{2}\right) = {\frac{1 + \cos(\alpha)}{\sin(\alpha)}}$$
+\subsection{Werner}
+$$\sin(\alpha)\sin(\beta) = \frac{1}{2} \left[\cos(\alpha - \beta) - \cos(\alpha + \beta)\right]$$
+$$\cos(\alpha)\cos(\beta) = \frac{1}{2} \left[\cos(\alpha - \beta) + \cos(\alpha + \beta)\right]$$
+$$\sin(\alpha)\cos(\beta) = \frac{1}{2} \left[\sin(\alpha - \beta) + \sin(\alpha + \beta)\right]$$
+
+\section{Derivate fondamentali}
+$$ (\arcsin(x))' = \frac{1}{\sqrt{1 - x^2}}$$
+$$ (\arccos(x))' = - \frac{1}{\sqrt(1 - x^2)}$$
+$$ (\arctan(x))' = \frac{1}{1 + x^2}$$
+$$ (\sec(x))' = \tan(x)\sec(x)$$
+$$ (\csc(x))' = -\cot(x)\csc(x)$$
+$$ (\sin^n(x))' = n\cdot \sin^{n-1}(x)\cos(x)$$
+$$ (\cos^n(x))' = -n\cdot \sin(x)\cos^{n-1}(x)$$
+$$ (\tan^n(x))' = n \cdot \csc(x) \cdot \sec(x) \cdot \tan^n (x)$$
+$$ (\tan(x))' = 1 + \tan^2(x) $$
+$$ (\cot^n(x))' = - n \cdot \csc(x) \cdot \sec(x) \cdot \cot^n (x)$$
+$$ (a^x)' = a^x \ln a$$
+$$ (\log_a~x )' = \frac{1}{x\ln(a)}$$
+
+\section{Sostituzioni notevoli}
+\textit{Per funzioni razionali in seno e coseno:} $t \coloneqq tan(\frac{x}{2}) $
+$$ sin(x) = \frac{2t}{1+t^2}$$
+$$ cos(x) = \frac{\-t^2}{1+t^2}$$
+
+\textit{Per radici del tipo $\sqrt{a - x^2}$:}
+$$ x = sin(t) $$
+
+\section{Sviluppi in serie}
+$$ e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + o(x^3)$$
+$$ ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)$$
+$$ sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} + o(x^6)$$
+$$ cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^5)$$
+$$ tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^6)$$
+$$ arctan(x) = x - \frac{x^3}{3} + \frac{x^5}{5} + o(x^6)$$
+$$ \frac{1}{1-x} = 1 + x + x^2 + x^3 + o(x^3)$$
+$$(1 + x) ^ \alpha = 1 + \alpha x + \frac{\alpha (\alpha - 1)x^2}{2!} + \dots $$
+$$ + \frac{\alpha(\alpha - 1)\dots (\alpha - n - 1) x^n}{n!} + o(x^n) $$
+
+\section{Integrali utili}
+... quelli trigonometrici brutti ...
+
+\section{Cambiamento delle variabili}
+\begin{equation*}
+	\int_R f(\vec {x}) d\vec{x} \underset{{\vec{u} = \vec{g} (\vec{x})}}{=} \int_{\vec{g}^{-1}(R)} f(\vec {u}) \abs{det J_g(\vec u)} d\vec{u}
+\end{equation*}
+
+\subsection{Coordinate sferiche}
+\begin{center}
+	\includegraphics[scale=.2]{spherical.png}
+\end{center}
+\begin{equation*}
+	\vec{g} :
+	\begin{bmatrix}
+		x \\
+		y \\
+		z \\
+	\end{bmatrix} =
+	\begin{bmatrix}
+		\rho \sin \phi \cos \theta \\
+		\rho \sin \phi \sin \theta \\
+		\rho \cos \phi             \\
+	\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+	\rho = \sqrt{x^2 + y^2 + z^2}
+\end{equation*}
+\begin{equation*}
+	\abs{detJ_{\vec{g}}(\vec{u})} = \rho^2 \sin(\phi)
+\end{equation*}
+\subsection{Coordinate cilindriche}
+\begin{equation*}
+	\vec{g} :
+	\begin{bmatrix}
+		x \\
+		y \\
+		z \\
+	\end{bmatrix} =
+	\begin{bmatrix}
+		r \cos \theta \\
+		r \sin \theta \\
+		z             \\
+	\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+	r = \sqrt{x^2 + y^2}
+\end{equation*}
+\begin{equation*}
+	\abs{detJ_{\vec{g}}(\vec{u})} = r
+\end{equation*}
+\end{document}
