@@ -1,14 +1,16 @@
 \documentclass[a4paper,portrait,columns=3,5pt]{cheatsheet}
 \title{Formulario Analisi 2}
-\author{Giacomo Fabris}
+%\author{Elena Acinapura, Giacomo Fabris}
+\author{}
 \date{\today}
 
 \usepackage{commath}
 \usepackage{graphicx}
 \usepackage{mathtools}
+\usepackage{commath}
 
 \begin{document}
-\maketitle
+%\maketitle
 
 \section{Formule trigonometriche}
 \subsection{Addizione e sottrazione}
@@ -49,33 +51,33 @@ $$ (\log_a~x )' = \frac{1}{x\ln(a)}$$
 
 \section{Sostituzioni notevoli}
 \textit{Per funzioni razionali in seno e coseno:} $t \coloneqq tan(\frac{x}{2}) $
-$$ sin(x) = \frac{2t}{1+t^2}$$
-$$ cos(x) = \frac{\-t^2}{1+t^2}$$
+$$ \sin(x) = \frac{2t}{1+t^2}$$
+$$ \cos(x) = \frac{\-t^2}{1+t^2}$$
 
 \textit{Per radici del tipo $\sqrt{a - x^2}$:}
-$$ x = sin(t) $$
+$$ x = \sqrt{a} \sin(t) $$
 
 \section{Sviluppi in serie}
 $$ e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + o(x^3)$$
-$$ ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)$$
-$$ sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} + o(x^6)$$
-$$ cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^5)$$
-$$ tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^6)$$
-$$ arctan(x) = x - \frac{x^3}{3} + \frac{x^5}{5} + o(x^6)$$
+$$ \ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)$$
+$$ \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} + o(x^6)$$
+$$ \cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^5)$$
+$$ \tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^6)$$
+$$ \arctan(x) = x - \frac{x^3}{3} + \frac{x^5}{5} + o(x^6)$$
 $$ \frac{1}{1-x} = 1 + x + x^2 + x^3 + o(x^3)$$
 $$(1 + x) ^ \alpha = 1 + \alpha x + \frac{\alpha (\alpha - 1)x^2}{2!} + \dots $$
 $$ + \frac{\alpha(\alpha - 1)\dots (\alpha - n - 1) x^n}{n!} + o(x^n) $$
 
 \section{Integrali utili}
-$$ \int sin^2(x) dx = \frac{1}{2} (x - sin(x)~cos(x)) $$
-$$ \int sin^3(x) dx = \frac{1}{12} (cos(3x)-9~cos(x)) $$
-$$ \int sin^4(x) dx = \frac{1}{32} (12~x ~-~ 8~sin(2x)~+~sin(4x)) $$
-$$ \int cos^2(x) dx = \frac{1}{2} (x + sin(x)~cos(x)) $$
-$$ \int cos^3(x) dx = \frac{1}{12} (sin(3x) + 9~sin(x))$$
-$$ \int cos^4(x) dx = \frac{1}{32} (12~x ~+~ 8~sin(2x)~+~sin(4x))$$
-$$ \int sin(x) ~ cos(x) dx = -\frac{1}{2}~cos^2(x) $$ 
-$$ \int sec(x) dx = \log (tan(x)~+~sec(x)) $$
-$$ \int sec^2(x) dx = tan(x) $$
+$$ \int \sin^2(x) \dif x = \frac{1}{2} (x - \sin(x) \cos(x)) $$
+$$ \int \sin^3(x) \dif x = \frac{1}{12} (\cos(3x)-9\cos(x)) $$
+$$ \int \sin^4(x) \dif x = \frac{1}{32} (12x - 8\sin(2x)+\sin(4x)) $$
+$$ \int \cos^2(x) \dif x = \frac{1}{2} (x + \sin(x)\cos(x)) $$
+$$ \int \cos^3(x) \dif x = \frac{1}{12} (\sin(3x) + 9\sin(x))$$
+$$ \int \cos^4(x) \dif x = \frac{1}{32} (12 x + 8\sin(2x)+\sin(4x))$$
+$$ \int \sin(x) ~ \cos(x) \dif x = -\frac{1}{2} \cos^2(x) $$ 
+$$ \int \sec(x) \dif x = \ln (\tan(x) + \sec(x)) $$
+$$ \int \sec^2(x) \dif x = \tan(x) $$
 \section{Cambiamento delle variabili}
 \begin{equation*}
 	\int_R f(\vec {x}) d\vec{x} \underset{{\vec{u} = \vec{g} (\vec{x})}}{=} \int_{\vec{g}^{-1}(R)} f(\vec {u}) \abs{det J_g(\vec u)} d\vec{u}
