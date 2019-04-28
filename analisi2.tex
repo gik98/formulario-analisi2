@@ -44,7 +44,7 @@ $$ (\cos^n(x))' = -n\cdot \sin(x)\cos^{n-1}(x)$$
 $$ (\tan^n(x))' = n \cdot \csc(x) \cdot \sec(x) \cdot \tan^n (x)$$
 $$ (\tan(x))' = 1 + \tan^2(x) $$
 $$ (\cot^n(x))' = - n \cdot \csc(x) \cdot \sec(x) \cdot \cot^n (x)$$
-$$ (a^x)' = a^x \ln a$$
+$$ (a^x)' = a^x \ln(a)$$
 $$ (\log_a~x )' = \frac{1}{x\ln(a)}$$
 
 \section{Sostituzioni notevoli}
@@ -67,8 +67,15 @@ $$(1 + x) ^ \alpha = 1 + \alpha x + \frac{\alpha (\alpha - 1)x^2}{2!} + \dots $$
 $$ + \frac{\alpha(\alpha - 1)\dots (\alpha - n - 1) x^n}{n!} + o(x^n) $$
 
 \section{Integrali utili}
-... quelli trigonometrici brutti ...
-
+$$ \int sin^2(x) dx = \frac{1}{2} (x - sin(x)~cos(x)) $$
+$$ \int sin^3(x) dx = \frac{1}{12} (cos(3x)-9~cos(x)) $$
+$$ \int sin^4(x) dx = \frac{1}{32} (12~x ~-~ 8~sin(2x)~+~sin(4x)) $$
+$$ \int cos^2(x) dx = \frac{1}{2} (x + sin(x)~cos(x)) $$
+$$ \int cos^3(x) dx = \frac{1}{12} (sin(3x) + 9~sin(x))$$
+$$ \int cos^4(x) dx = \frac{1}{32} (12~x ~+~ 8~sin(2x)~+~sin(4x))$$
+$$ \int sin(x) ~ cos(x) dx = -\frac{1}{2}~cos^2(x) $$ 
+$$ \int sec(x) dx = \log (tan(x)~+~sec(x)) $$
+$$ \int sec^2(x) dx = tan(x) $$
 \section{Cambiamento delle variabili}
 \begin{equation*}
 	\int_R f(\vec {x}) d\vec{x} \underset{{\vec{u} = \vec{g} (\vec{x})}}{=} \int_{\vec{g}^{-1}(R)} f(\vec {u}) \abs{det J_g(\vec u)} d\vec{u}
