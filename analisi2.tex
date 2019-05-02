@@ -37,7 +37,7 @@ $$\sin(\alpha)\cos(\beta) = \frac{1}{2} \left[\sin(\alpha - \beta) + \sin(\alpha
 
 \section{Derivate fondamentali}
 $$ (\arcsin(x))' = \frac{1}{\sqrt{1 - x^2}}$$
-$$ (\arccos(x))' = - \frac{1}{\sqrt(1 - x^2)}$$
+$$ (\arccos(x))' = - \frac{1}{\sqrt{1 - x^2}}$$
 $$ (\arctan(x))' = \frac{1}{1 + x^2}$$
 $$ (\sec(x))' = \tan(x)\sec(x)$$
 $$ (\csc(x))' = -\cot(x)\csc(x)$$
@@ -72,12 +72,21 @@ $$ + \frac{\alpha(\alpha - 1)\dots (\alpha - n - 1) x^n}{n!} + o(x^n) $$
 $$ \int \sin^2(x) \dif x = \frac{1}{2} (x - \sin(x) \cos(x)) $$
 $$ \int \sin^3(x) \dif x = \frac{1}{12} (\cos(3x)-9\cos(x)) $$
 $$ \int \sin^4(x) \dif x = \frac{1}{32} (12x - 8\sin(2x)+\sin(4x)) $$
+$$ \int \sin^n(x) \dif x = -\frac{1}{n} \cos(x) \sin^{n-1}(x) + $$ 
+$$ + \frac{n-1}{n} \int \sin^{n-2}(x) \dif x $$
 $$ \int \cos^2(x) \dif x = \frac{1}{2} (x + \sin(x)\cos(x)) $$
 $$ \int \cos^3(x) \dif x = \frac{1}{12} (\sin(3x) + 9\sin(x))$$
 $$ \int \cos^4(x) \dif x = \frac{1}{32} (12 x + 8\sin(2x)+\sin(4x))$$
+$$ \int \cos^n(x) \dif x = \frac{1}{n} \sin(x) \cos^{n-1}(x) + $$
+$$ + \frac{n-1}{n} \int \cos^{n-2}(x) \dif x $$
 $$ \int \sin(x) ~ \cos(x) \dif x = -\frac{1}{2} \cos^2(x) $$ 
 $$ \int \sec(x) \dif x = \ln (\tan(x) + \sec(x)) $$
 $$ \int \sec^2(x) \dif x = \tan(x) $$
+$$ \int \log(f(x)) \dif x = x \log (f(x)) - \int \frac{x}{f(x)} \dif x $$
+$$ \int \sqrt{a - x^2} \dif x = \frac{x}{2} \sqrt{a - x^2} + \frac{a}{2} \arcsin \left(\frac {x}{a}\right) = $$
+$$ =  \frac{x}{2} \sqrt{a - x^2} + \frac{a}{2} \arctan \left(\frac{x}{\sqrt{a-x^2}}\right) $$
+$$ \int \sqrt{a + x^2} \dif x =  \frac{x}{2} \sqrt{a + x^2} + $$ 
+$$ + \frac{a}{2} \ln \abs{\frac{x + \sqrt{a+x^2}}{\sqrt{a}}} $$
 \section{Cambiamento delle variabili}
 \begin{equation*}
 	\int_R f(\vec {x}) d\vec{x} \underset{{\vec{u} = \vec{g} (\vec{x})}}{=} \int_{\vec{g}^{-1}(R)} f(\vec {u}) \abs{det J_g(\vec u)} d\vec{u}
