@@ -8,6 +8,8 @@
 \usepackage{graphicx}
 \usepackage{mathtools}
 \usepackage{commath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
 
 \begin{document}
 %\maketitle
@@ -95,9 +97,9 @@ $$ + \frac{a}{2} \ln \abs{\frac{x + \sqrt{a+x^2}}{\sqrt{a}}} $$
 \end{equation*}
 
 \subsection{Coordinate sferiche}
-\begin{center}
-	\includegraphics[scale=.2]{spherical.png}
-\end{center}
+% \begin{center}
+% 	\includegraphics[scale=.2]{spherical.png}
+% \end{center}
 \begin{equation*}
 	\vec{g} :
 	\begin{bmatrix}
@@ -137,4 +139,20 @@ $$ + \frac{a}{2} \ln \abs{\frac{x + \sqrt{a+x^2}}{\sqrt{a}}} $$
 \begin{equation*}
 	\abs{detJ_{\vec{g}}(\vec{u})} = r
 \end{equation*}
+\section{Teoremi principali}
+\begin{itemize}
+	\item $f$ differenziabile in $x_0~ \Rightarrow~f$ continua in $x_0 $
+	\item \textbf{Teorema del differenziale totale} \\ Derivate parziali di $f$ esistono in un intorno di $x_0$ e sono continue in $x_0~\Rightarrow ~ f$ differenziabile in $x_0$ 
+	\item \textbf{Schwarz con due alternative} \\ 1) Derivate seconde miste $f_{xy}$ e $f_{yx}$ di $f$ esistono in un intorno di $x_0$ e sono continue in $x_0~\Rightarrow~f_{xy} = f_{yx}$ in $x_0$
+			\\ 2) $f_{xy}$ e $f_{yx}$ esitono nell'intorno e sono differenziabili nel punto $\Rightarrow~_{xy} = f_{yx}$ in $x_0$
+	\item \textbf{Lagrange direzionale a valori scalari} 
+	\item \textbf{Lagrange direzionale a valori vettori}
+	\item $f : A \rightarrow \mathbb{R^m}$ continua, $A$ connesso $\Rightarrow~f(A)$ è connesso
+	\item \textbf{Weierstrass}
+	\item \textbf{Fermat}
+	\item \textbf{Teorema sui punti estremali}
+
+
+\end{itemize}
+
 \end{document}
