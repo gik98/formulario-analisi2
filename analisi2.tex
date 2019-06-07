@@ -9,6 +9,7 @@
 \usepackage{mathtools}
 \usepackage{commath}
 \usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage[utf8]{inputenc}
 
 \begin{document}
@@ -38,29 +39,32 @@ $$\cos(\alpha)\cos(\beta) = \frac{1}{2} \left[\cos(\alpha - \beta) + \cos(\alpha
 $$\sin(\alpha)\cos(\beta) = \frac{1}{2} \left[\sin(\alpha - \beta) + \sin(\alpha + \beta)\right]$$
 
 \section{Derivate fondamentali}
+$$ (\tan(x))' = 1 + \tan^2(x) = \sec^2(x)$$
 $$ (\arcsin(x))' = \frac{1}{\sqrt{1 - x^2}}$$
 $$ (\arccos(x))' = - \frac{1}{\sqrt{1 - x^2}}$$
 $$ (\arctan(x))' = \frac{1}{1 + x^2}$$
 $$ (\sec(x))' = \tan(x)\sec(x)$$
 $$ (\csc(x))' = -\cot(x)\csc(x)$$
-$$ (\sin^n(x))' = n\cdot \sin^{n-1}(x)\cos(x)$$
-$$ (\cos^n(x))' = -n\cdot \sin(x)\cos^{n-1}(x)$$
-$$ (\tan^n(x))' = n \cdot \csc(x) \cdot \sec(x) \cdot \tan^n (x)$$
-$$ (\tan(x))' = 1 + \tan^2(x) $$
 $$ (\cot^n(x))' = - n \cdot \csc(x) \cdot \sec(x) \cdot \cot^n (x)$$
 $$ (a^x)' = a^x \ln(a)$$
 $$ (\log_a~x )' = \frac{1}{x\ln(a)}$$
 
+\section{Roba iperbolica}
+$$ \sinh(x) = \frac{e^x - e^{-x}}{2} $$
+$$\cosh(x) = \frac{e^x + e^{-x}}{2}$$
+$$ \cosh^2(x) - \sinh^2(x) = 1 $$
+$$ (\cosh(x))' = \sinh(x)$$
+$$ \quad (\sinh(x))' = \cosh(x) $$
 \section{Sostituzioni notevoli}
-\textit{Per funzioni razionali in seno e coseno:} $t \coloneqq tan(\frac{x}{2}) $
-$$ \sin(x) = \frac{2t}{1+t^2}$$
-$$ \cos(x) = \frac{\-t^2}{1+t^2}$$
+\textit{Per funzioni razionali in seno e coseno:} 
+$$t \coloneqq tan(\frac{x}{2})\quad \dif x = \frac{2}{1 + t^2} \dif t$$
+$$ \sin(x) = \frac{2t}{1+t^2} \quad \cos(x) = \frac{\-t^2}{1+t^2}$$
 
 \textit{Per radici del tipo $\sqrt{a - x^2}$:}
 $$ x = \sqrt{a} \sin(t) $$
 \section{Disuguaglianze utili}
 $$ \abs{xy} \leq \frac{1}{2}\left(x^2 + y^2\right) $$
-$$ \abs{\sin(xy)} \leq \abs{xy} $$
+$$ \abs{\sin(xy)} \leq \abs{xy}\quad \text{per xy$\rightarrow$ 0}$$
 \section{Sviluppi in serie}
 $$ e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + o(x^3)$$
 $$ \ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)$$
@@ -141,6 +145,17 @@ $$ + \frac{a}{2} \ln \abs{\frac{x + \sqrt{a+x^2}}{\sqrt{a}}} $$
 \begin{equation*}
 	\abs{detJ_{\vec{g}}(\vec{u})} = r
 \end{equation*}
+\section{Curve e superfici}
+Curva $\gamma:[a,b]\rightarrow\mathbb{R}^n$,\\ $f:A\subset{\mathbb{R}^n}\rightarrow\mathbb{R}$, \\
+$F:B\subset\mathbb{R}^n\rightarrow\mathbb{R}^n$
+$$ L(\gamma) = \int_{a}^{b} \norm{\gamma'(t)} \dif t$$
+$$ \int_{\gamma} f\dif s = \int_a^b f(\gamma(t)) \norm{\gamma'(t)} \dif t$$
+$$ \int_\gamma \omega_{F} = \int_\gamma \langle F(\gamma(t)), \gamma'(t)\rangle \dif s = $$\\
+$$ = \int_a^b \sum_{i=1}^n\left[F_i(\gamma(t))~\gamma_i'(t)\right] \dif t$$
+
+Superficie S con par. $\phi:D\subset\mathbb{R}^2\rightarrow\mathbb{R}^n$, $\phi(u, v) = (\phi_1, \dots, \phi_n)$\\
+$$ Area(S) = \iint_D \norm{\phi_u \wedge \phi_v} \dif u \dif v$$
+
 \section{Teoremi principali}
 \begin{itemize}
 	\item $f$ differenziabile in $x_0~ \Rightarrow~f$ continua in $x_0 $
@@ -150,7 +165,6 @@ $$ + \frac{a}{2} \ln \abs{\frac{x + \sqrt{a+x^2}}{\sqrt{a}}} $$
 	\item \textbf{Lagrange direzionale a valori scalari} 
 	\item \textbf{Lagrange direzionale a valori vettori}
 	\item $f : A \rightarrow \mathbb{R^m}$ continua, $A$ connesso $\Rightarrow~f(A)$ è connesso
-	\item \textbf{Weierstrass}
 	\item \textbf{Fermat}
 	\item \textbf{Teorema sui punti estremali}
 
