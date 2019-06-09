@@ -10,6 +10,7 @@
 \usepackage{commath}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{bigints}
 \usepackage[utf8]{inputenc}
 
 \begin{document}
@@ -165,9 +166,28 @@ $$ Area(S) = \iint_D \norm{\phi_u \wedge \phi_v} \dif u \dif v$$
 	\item \textbf{Lagrange direzionale a valori scalari} 
 	\item \textbf{Lagrange direzionale a valori vettori}
 	\item $f : A \rightarrow \mathbb{R^m}$ continua, $A$ connesso $\Rightarrow~f(A)$ è connesso
-	\item \textbf{Fermat}
-	\item \textbf{Teorema sui punti estremali}
-
+	\item \textbf{Teorema sui punti estremali}\\
+			$f:A\subset \mathbb{R}^n \rightarrow \mathbb{R}$, $x_0 \in A$ punto critico, $f\in C^2(A)$\\
+			- $Hf(x_0)$ def. negativa $\Rightarrow x_0$ p. di max stretto \\
+			- $Hf(x_0)$ def. positiva $\Rightarrow x_0$ p. di min stretto \\
+			- $Hf(x_0)$ indef. $\Rightarrow x_0$ p. di sella\\
+			- $x_0$ p. di max $\Rightarrow Hf(x_0)$ semidef. neg.\\
+			- $x_0$ p. di min $\Rightarrow Hf(x_0)$ semidef. pos.
+	\item \textbf{Forme diff. esatte e poteziale}\\
+			$A$ aperto, $\omega\in C^1(A)$ esatta di potenziale $f$, $\gamma :[a,b]\rightarrow \mathbb{R}$ curva con supporto in A 
+			$\Rightarrow \int_\gamma \omega = f(\gamma(b)) - f(\gamma(a))$
+	\item \textbf{Forme differenziali esatte} \\
+			$\omega \in C^1(A)$, $A$ aperto e connesso; sono equivalenti:\\
+				- $\omega$ è esatta in A\\
+				- per ogni $\gamma_1$ e $\gamma_2$ parametrizzazioni della stessa curva, 
+					$\int_{\gamma_1} \omega = \int_{\gamma_2}\omega$\\
+				- per ogni $\gamma$ curva chiusa, $\int_\gamma \omega = 0$
+	\item \textbf{Equivalenza per l'esattezza}\\
+			$A\subset \mathbb{R}^n$, $\omega \in C^1(A)$\\ $A$ semplicemente connesso e $\omega$ chiusa $\Leftrightarrow \omega$ esatta in A
+	\item \textbf{Formule di Green}\\
+			$D \subset \mathbb{R}^2$ dominio regolare e normale a tratti, $f \in C^1(D)$ a valori scalari, valgono:\\
+			 $$\iint_D\dfrac{\partial f}{\partial x} \dif A = \int_{+\partial D} f \dif y$$\\
+			$$\iint_D \dfrac{\partial f}{\partial y} \dif A = -\int_{+\partial D} f \dif x$$
 
 \end{itemize}
 
