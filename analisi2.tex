@@ -151,9 +151,9 @@ $$ + \frac{a}{2} \ln \abs{\frac{x + \sqrt{a+x^2}}{\sqrt{a}}} $$
 	\abs{detJ_{\vec{g}}(\vec{u})} = r
 \end{equation*}
 \section{Curve e superfici}
-\textbf{Curva} $\gamma:[a,b]\rightarrow\mathbb{R}^n$,\\
-- per curve cartesiane per cui $y = g(x)$ , $\norm{\gamma'(t)} = \sqrt{1 + (g'(x))^2}$\\
-- per curve in coord. polari $\norm{\gamma'(t)} = \sqrt{\rho^2(\theta) + (\rho'(\theta))^2} $\\
+\textbf{Curva} $\gamma:[a,b]\rightarrow\mathbb{R}^n$\\
+Per curve cartesiane per cui $y = g(x)$ , $$\norm{\gamma'(t)} = \sqrt{1 + (g'(x))^2}$$\\
+Per curve in coord. polari $$\norm{\gamma'(t)} = \sqrt{\rho^2(\theta) + (\rho'(\theta))^2} $$\\
 $$ L(\gamma) = \int_{a}^{b} \norm{\gamma'(t)} \dif t$$\\
 Per $f$ funzione a valori scalari definita sulla curva
 $$ \int\limits_{\gamma} f\dif s = \int_a^b f(\gamma(t)) \norm{\gamma'(t)} \dif t$$\\
@@ -161,8 +161,8 @@ Per $F$ campo vettoriale definito sulla curva
 $$ \int\limits_\gamma \omega_{F} = \int_a^b \langle F(\gamma(t)), \gamma'(t)\rangle \dif t = $$\\
 $$ = \int\limits_a^b \sum_{i=1}^n\left[F_i(\gamma(t))~\gamma_i'(t)\right] \dif t$$
 
-\textbf{Superficie} S con par. $\phi:D\subset\mathbb{R}^2\rightarrow\mathbb{R}^n$, $\phi(u, v) = (\phi_1, \dots, \phi_n)$\\
-- Per superfici cartesiane per cui $z = g(x,y)$, $N(x, y) = \sqrt{1 + \norm{\nabla g}^2}$
+\textbf{Superficie} S con par. $\phi:D\subset\mathbb{R}^2\rightarrow\mathbb{R}^n$\\
+Per superfici cartesiane per cui $z = g(x,y)$, $$\norm{\vec N} = \sqrt{1 + \norm{\nabla g}^2}$$
 $$ Area(S) = \iint\limits_D \norm{\phi_u \wedge \phi_v} \dif u \dif v$$
 Per $f$ funzione a valori scalari definita sulla superficie
 $$ \iint\limits_S f \dif \sigma = \iint\limits_D f ~\norm{\phi_u \wedge \phi_v} \dif u \dif v $$
@@ -176,7 +176,7 @@ $$ \iint\limits_D \langle F(\phi(u,v)), \phi_u \wedge \phi_v \rangle \dif u \dif
 	\item \textbf{Teorema del differenziale totale} \\ Derivate parziali di $f$ esistono in un intorno di $x_0$ e sono continue in $x_0~\Rightarrow ~ f$ differenziabile in $x_0$ 
 	\item \textbf{Schwarz con due alternative} \\ 1) Derivate seconde miste $f_{xy}$ e $f_{yx}$ di $f$ esistono in un intorno di $x_0$ e sono continue in $x_0~\Rightarrow~f_{xy} = f_{yx}$ in $x_0$
 			\\ 2) $f_{xy}$ e $f_{yx}$ esitono nell'intorno e sono differenziabili nel punto $\Rightarrow~_{xy} = f_{yx}$ in $x_0$
-	\item $f : A \rightarrow \mathbb{R^m}$ continua, $A$ connesso $\Rightarrow~f(A)$ è connesso
+	\item $f : A \rightarrow \mathbb{R}^m$ continua, $A$ connesso $\Rightarrow~f(A)$ è connesso
 	\item \textbf{Teorema sui punti estremali}\\
 			$f:A\subset \mathbb{R}^n \rightarrow \mathbb{R}$, $x_0 \in A$ punto critico, $f\in C^2(A)$\\
 			- $Hf(x_0)$ def. negativa $\Rightarrow x_0$ p. di max stretto \\
@@ -190,9 +190,9 @@ $$ \iint\limits_D \langle F(\phi(u,v)), \phi_u \wedge \phi_v \rangle \dif u \dif
 	\item \textbf{Forme differenziali esatte} \\
 			$\omega \in C^1(A)$, $A$ aperto e connesso; sono equivalenti:\\
 				- $\omega$ è esatta in A\\
-				- per ogni $\gamma_1$ e $\gamma_2$ parametrizzazioni della stessa curva, 
-					$\int_{\gamma_1} \omega = \int_{\gamma_2}\omega$\\
-				- per ogni $\gamma$ curva chiusa, $\int_\gamma \omega = 0$
+				- per ogni $\gamma_1$ e $\gamma_2$ parametrizzazioni della stessa curva contenuta in A, 
+					$\int\limits_{\gamma_1} \omega = \int\limits_{\gamma_2}\omega$\\
+				- per ogni $\gamma$ curva chiusa in A, $\int\limits_\gamma \omega = 0$
 	\item \textbf{Equivalenza per l'esattezza}\\
 			$A\subset \mathbb{R}^n$, $\omega \in C^1(A)$\\ $A$ semplicemente connesso e $\omega$ chiusa $\Leftrightarrow \omega$ esatta in A
 	\item \textbf{Formule di Green}\\
@@ -200,7 +200,7 @@ $$ \iint\limits_D \langle F(\phi(u,v)), \phi_u \wedge \phi_v \rangle \dif u \dif
 			 $$\iint\limits_D\dfrac{\partial f}{\partial x} \dif A = \int_{+\partial D} f \dif y$$\\
 			$$\iint\limits_D \dfrac{\partial f}{\partial y} \dif A = -\int_{+\partial D} f \dif x$$\\
 			$$ Area(D) = \frac{1}{2} \int\limits_{+\partial D} x\dif y - y\dif x = $$ \\
-			 $$ \underset{polari}{=} \frac{1}{2}\int_{\theta_1}^{\theta_2} \rho^2(\theta) \dif \theta$$
+			 $$ \underset{polari}{=} \frac{1}{2}\int\limits_{\theta_1}^{\theta_2} \rho^2(\theta) \dif \theta$$
 	\item \textbf{Teorema di Stokes}\\ 
 			$S$ superficie regolare bordo con parametrizzazione $\phi$, $F \in C^1$ sulla curva 
 			$$ \int\limits_S \langle rot(F), n_e \rangle \dif \sigma = \int\limits_{+\partial S}\langle F, T \rangle \dif s$$ 
