@@ -196,13 +196,20 @@ $$ \iint\limits_D \langle F(\phi(u,v)), \phi_u \wedge \phi_v \rangle \dif u \dif
 			$A$ aperto, $\omega\in C^1(A)$ esatta di potenziale $f$, $\gamma :[a,b]\rightarrow \mathbb{R}$ curva con supporto in A 
 			$\Rightarrow \int_\gamma \omega = f(\gamma(b)) - f(\gamma(a))$
 	\item \textbf{Forme differenziali esatte} \\
+			$E \subset \mathbb{R}^n$ aperto connesso. $\omega$ forma differenziale continua in $E$ associata al campo $F$ è \textbf{esatta in E} se esiste la funzione potenziale $U: E \to \mathbb{R}$ di classe $C^1$ tale che $\nabla U = F$.
+			
+	\item \textbf{Sulle forme differenziali esatte}\\
 			$\omega \in C^1(A)$, $A$ aperto e connesso; sono equivalenti:\\
 				- $\omega$ è esatta in A\\
 				- per ogni $\gamma_1$ e $\gamma_2$ parametrizzazioni della stessa curva contenuta in A, 
 					$\int\limits_{\gamma_1} \omega = \int\limits_{\gamma_2}\omega$\\
 				- per ogni $\gamma$ curva chiusa in A, $\int\limits_\gamma \omega = 0$
+	\item \textbf{Invarianza omotopica}\\
+		$E \in \mathbb{R}^n$ aperto connesso e $\omega$ \textbf{chiusa} in $E$. Se $\gamma^{(0)}$ e $\gamma^{(1)}$ sono due curve omotope in $E$, allora $\int\limits_{\gamma^{(0)}} \omega$ = $\int\limits_{\gamma^{(1)}} \omega$ \\
+		$\to$ una forma definita in un insieme non semplicemente connesso a causa di un buco \textbf{e la forma è chiusa}, posso calcolare l'integrale della forma su una curva che circonda il buco: se vale 0, per l'invarianza omotopica è 0 l'integrale di qualsiasi curva attorno al buco, dunque è esatta.
+	
 	\item \textbf{Equivalenza per l'esattezza}\\
-			$A\subset \mathbb{R}^n$, $\omega \in C^1(A)$\\ $A$ semplicemente connesso e $\omega$ chiusa $\Leftrightarrow \omega$ esatta in A
+			$A\subset \mathbb{R}^n$, $\omega \in C^1(A)$\\ $A$ semplicemente connesso e $\omega$ chiusa $\to \omega$ esatta in A
 	\item \textbf{Formule di Green}\\
 			$D \subset \mathbb{R}^2$ dominio regolare e normale a tratti, $f \in C^1(D)$ a valori scalari, valgono:\\
 			 $$\iint\limits_D\dfrac{\partial f}{\partial x} \dif A = \int_{+\partial D} f \dif y$$\\
