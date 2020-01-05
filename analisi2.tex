@@ -100,7 +100,7 @@ $$ \int \log(f(x)) \dif x = x \log (f(x)) - \int \frac{x f'(x)}{f(x)} \dif x $$
 $$ \int \sqrt{a - x^2} \dif x = \frac{x}{2} \sqrt{a - x^2} + \frac{a}{2} \arcsin \left(\frac {x}{a}\right) = $$
 $$ =  \frac{x}{2} \sqrt{a - x^2} + \frac{a}{2} \arctan \left(\frac{x}{\sqrt{a-x^2}}\right) $$
 $$ \int \sqrt{a + x^2} \dif x =  \frac{x}{2} \sqrt{a + x^2} + $$ 
-$$ + \frac{a}{2} \ln \abs{\frac{x + \sqrt{a+x^2}}{\sqrt{a}}} $$
+$$ + \frac{a}{2} \ln \abs{x + \sqrt{a+x^2}} $$
 
 \section{Cambiamento delle variabili}
 \begin{equation*}
@@ -111,6 +111,7 @@ $$ + \frac{a}{2} \ln \abs{\frac{x + \sqrt{a+x^2}}{\sqrt{a}}} $$
 % \begin{center}
 % 	\includegraphics[scale=.2]{spherical.png}
 % \end{center}
+$$ \phi \in [0, \pi]; ~ \theta \in [0, 2\pi]$$
 \begin{equation*}
 	\vec{g} :
 	\begin{bmatrix}
@@ -163,10 +164,11 @@ $$ \int\limits_\gamma \omega_{F} = \int_a^b \langle F(\gamma(t)), \gamma'(t)\ran
 $$ = \int\limits_a^b \sum_{i=1}^n\left[F_i(\gamma(t))~\gamma_i'(t)\right] \dif t$$
 
 \textbf{Superficie} S con par. $\phi:D\subset\mathbb{R}^2\rightarrow\mathbb{R}^n$\\
-Per superfici cartesiane per cui $z = g(x,y)$, $$\norm{\vec N} = \sqrt{1 + \norm{\nabla g}^2}$$
-$$ Area(S) = \iint\limits_D \norm{\phi_u \wedge \phi_v} \dif u \dif v$$
+$$ \vec N = \phi_u \wedge \phi_v ; ~ \vec n_e = \frac{\phi_u \wedge \phi_v}{\norm{\phi_u \wedge \phi_v}} $$
+Per superfici cartesiane per cui $z = g(x,y)$, $$\norm{\vec n_e} = \sqrt{1 + \norm{\nabla g}^2}$$
+$$ Area(S) = \iint\limits_D \norm{\vec N} \dif u \dif v$$
 Per $f$ funzione a valori scalari definita sulla superficie
-$$ \iint\limits_S f \dif \sigma = \iint\limits_D f ~\norm{\phi_u \wedge \phi_v} \dif u \dif v $$
+$$ \iint\limits_S f \dif \sigma = \iint\limits_D f ~\norm{\vec N} \dif u \dif v $$
 \textbf{Flusso attraverso una superficie}\\ Per $F$ campo vettoriale definita sulla superficie
 $$ \Phi_S(F) = \int\limits_S \langle F, n_e \rangle \dif \sigma = $$ \\ 
 $$ \iint\limits_D \langle F(\phi(u,v)), \phi_u \wedge \phi_v \rangle \dif u \dif v$$
@@ -228,8 +230,8 @@ $$ \iint\limits_D \langle F(\phi(u,v)), \phi_u \wedge \phi_v \rangle \dif u \dif
 			$$ Area(D) = \frac{1}{2} \int\limits_{+\partial D} x\dif y - y\dif x = $$ \\
 			 $$ \underset{polari}{=} \frac{1}{2}\int\limits_{\theta_1}^{\theta_2} \rho^2(\theta) \dif \theta$$
 	\item \textbf{Teorema di Stokes}\\ 
-			$S$ superficie regolare bordo con parametrizzazione $\phi$, $F \in C^1$ sulla curva 
-			$$ \int\limits_S \langle rot(F), n_e \rangle \dif \sigma = \int\limits_{+\partial S}\langle F, T \rangle \dif s$$ 
+			$S$ superficie regolare; bordo con parametrizzazione $\phi$, $F \in C^1$ sulla curva 
+			$$ \int\limits_S \langle rot(F), n_e \rangle \dif \sigma = \int\limits_{+\partial S}\langle F, \phi ' \rangle \dif s$$ 
 	\item \textbf{Teorema della divergenza}\\
 			$T$ dominio regolare chiuso, $F \in C^1$ su T
 			$$ \iiint\limits_T div(F) \dif V = \iint\limits_{+\partial T} \langle F, n_e \rangle \dif \sigma =$$ \\
