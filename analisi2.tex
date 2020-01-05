@@ -178,6 +178,17 @@ $$ \iint\limits_D \langle F(\phi(u,v)), \phi_u \wedge \phi_v \rangle \dif u \dif
 \textbf{Coni}: $z = a - \sqrt{x^2 + y^2}$, vertice in $a$, verso il basso. Verso l'alto: $a + \sqrt{x^2 + y^2}$
 
 \textbf{Ellissoidi}: $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$, lunghezza del semiasse lungo $x$ è $a$, ecc. 
+
+\section{Superfici}
+
+\textbf{Cerchi:} $f\begin{pmatrix}r\\\theta\end{pmatrix} = \begin{cases}x = r \cos(\theta)\\y = r\sin(\theta)\\z = k\end{cases}$
+
+\textbf{Cilindri:} $f\begin{pmatrix}\zeta\\\theta\end{pmatrix} = \begin{cases}x = r \cos(\theta)\\y = r\sin(\theta)\\z = \zeta\end{cases}$
+
+\textbf{Coni:} $f\begin{pmatrix}\zeta\\\theta\end{pmatrix} = \begin{cases}x = \zeta \cos(\theta)\\y = \zeta \sin(\theta)\\z = a \pm \zeta \end{cases}$
+
+\textbf{Ellissoide:} $f\begin{pmatrix}\phi\\\theta\end{pmatrix} = \begin{cases}x = a  \sin(\phi) \cos(\theta)\\y = b \sin(\phi) \sin(\theta)\\z = c \cos(\theta) \end{cases}$
+
 \section{Teoremi principali}
 \begin{itemize}
 	\item $f$ differenziabile in $x_0~ \Rightarrow~f$ continua in $x_0 $
@@ -225,4 +236,13 @@ $$ \iint\limits_D \langle F(\phi(u,v)), \phi_u \wedge \phi_v \rangle \dif u \dif
 			$$ = \Phi_{+\partial T}(F)$$
 \end{itemize}
 
+\section{Rotazione}
+\begin{equation*}
+	R(\theta) =
+	\begin{bmatrix}
+		\cos(\theta) & -\sin(\theta) \\
+		\sin(\theta) & \cos(\theta) \\
+	\end{bmatrix}
+	\end{equation*}
+	
 \end{document}
